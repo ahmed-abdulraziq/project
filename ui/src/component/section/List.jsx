@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import useFetch from "../../useFetch/useFetch";
 
 const List = ({ reFetch }) => {
-  const { data, loading } = useFetch(`https://ques2.up.railway.app/show`);
+  const { data, loading } = useFetch(`https://apiflask.up.railway.app/show`);
   return (
     <Fragment>
       {loading && <h1>loading</h1>}
@@ -47,7 +47,7 @@ const List = ({ reFetch }) => {
                             <div
                               onClick={() => {
                                 reFetch(
-                                  `https://ques2.up.railway.app/show/${item.id}`
+                                  `https://apiflask.up.railway.app/show/${item.id}`
                                 );
                                 localStorage.setItem("show", `${item.id}`);
                               }}
@@ -73,7 +73,7 @@ const List = ({ reFetch }) => {
                           <div
                             onClick={() =>
                               reFetch(
-                                `https://ques2.up.railway.app/ques/${v.ques}`
+                                `https://apiflask.up.railway.app/ques/${v.ques}`
                               )
                             }
                             className="course-lists d-flex flex-wrap justify-content-between"

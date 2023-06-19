@@ -12,8 +12,8 @@ const Ques = ({ data, id, reFetch }) => {
       arr.push(e.target[i].value);
     }
 
-    axios.post(`https://ques2.up.railway.app/check/${id}`, { arr }).then((i) => {
-      (i.data.answer.length <= 5) && reFetch(`https://ques2.up.railway.app/ques/${id}`);
+    axios.post(`https://apiflask.up.railway.app/check/${id}`, { arr }).then((i) => {
+      (i.data.answer.length <= 5) && reFetch(`https://apiflask.up.railway.app/ques/${id}`);
       (i.data.answer.length > 5) && setQues(!ques);
     });
   };
@@ -38,7 +38,7 @@ const Ques = ({ data, id, reFetch }) => {
             <h1>للأسف هناك الكثير من الأخطاء</h1>
             <button
               type="submit"
-              onClick={() => reFetch(`https://ques2.up.railway.app/ques/${id}`)}
+              onClick={() => reFetch(`https://apiflask.up.railway.app/ques/${id}`)}
             >
               Resend
             </button>

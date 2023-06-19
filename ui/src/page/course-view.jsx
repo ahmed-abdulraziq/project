@@ -7,7 +7,7 @@ import Ques from "../component/section/ques";
 const CourseView = () => {
   let show = localStorage.getItem("show") || 0;
   const { data, loading, reFetch } = useFetch(
-    `https://ques2.up.railway.app/show/${show}`
+    `https://apiflask.up.railway.app/show/${show}`
   );
   return (
     <Fragment>
